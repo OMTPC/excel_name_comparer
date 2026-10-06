@@ -6,6 +6,8 @@
 # sys.path.insert(0, str(ROOT))
 
 
+import pytest
+
 from src.reader import read_names_from_excel 
 
 def test_read_names_from_excel():
@@ -59,3 +61,13 @@ def test_read_names_from_two_columns():
     print(f"Names read from Excel with invalid columns: {names_invalid_columns}")
 
     assert names_invalid_columns == []  # Should return an empty list for invalid columns
+
+    def test_file_not_found():
+        # Test with a non-existent file path
+        with pytest.raises(
+            FileNotFoundError
+        ):
+            read_names_from_excel(
+                "missing.xlsx",
+                "Name"
+            )

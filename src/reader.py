@@ -1,5 +1,6 @@
 
 import pandas as pd
+from pathlib import Path
 
 def read_names_from_excel(file_path: str, full_name_column: str = None, first_name_column: str = None, 
                           surname_name_column: str = None) -> list:
@@ -15,6 +16,11 @@ def read_names_from_excel(file_path: str, full_name_column: str = None, first_na
     Returns:
         list: A list of names read from the specified columns in the Excel file.
     """
+
+    if not Path(file_path).exists():
+        raise FileNotFoundError(f"The file '{file_path}' does not exist.")
+
+    
     try:
         # Read the Excel file into a DataFrame
         df = pd.read_excel(file_path)
