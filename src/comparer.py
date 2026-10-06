@@ -11,9 +11,9 @@ def find_unmatched_names(names_a: list, names_b: list) -> list:
     Names unique to either list.
     """
 
-    print(f"Finding unmatched names between two lists.")
-    print(f"List A: {names_a}")
-    print(f"List B: {names_b}")
+    # print(f"Finding unmatched names between two lists.")
+    # print(f"List A: {names_a}")
+    # print(f"List B: {names_b}")
 
     if not isinstance(names_a, list) or not isinstance(names_b, list):
         print("Error: Both inputs must be lists.")
@@ -29,7 +29,7 @@ def find_unmatched_names(names_a: list, names_b: list) -> list:
     return sorted(list(unmatched_names))
 
 
-names_a = ["john smith", "jane doe", "alice johnson"]
-names_b = ["jane doe", "bob brown", "alice johnson"]
-unmatched_names = find_unmatched_names(names_a, names_b)
+# names_a = ["john smith", "jane doe", "alice johnson"]
+# names_b = ["jane doe", "bob brown", "alice johnson"]
+# unmatched_names = find_unmatched_names(names_a, names_b)
 

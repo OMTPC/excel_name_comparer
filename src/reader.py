@@ -71,9 +71,9 @@ def read_names_from_excel(file_path: str, full_name_column: str = None, first_na
 
 
 
-file_path = "data/input/list2_names_test.xlsx" 
-full_name_column = 'Surname'  # Replace with the actual column name in your Excel file
-# first_name_column = 'Name'
-# surname_name_column = 'Surname'
+# file_path = "data/input/list2_names_test.xlsx" 
+# full_name_column = 'Surname'  # Replace with the actual column name in your Excel file
+# # first_name_column = 'Name'
+# # surname_name_column = 'Surname'
 
-read_names = read_names_from_excel(file_path, full_name_column=full_name_column)
+# read_names = read_names_from_excel(file_path, full_name_column=full_name_column)

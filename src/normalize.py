@@ -12,7 +12,7 @@ def normalize_names(name: str) -> str:
         "SMITH, JOHN (Dr)"        -> "john smith"
     """
 
-    print(f"Original name: {name}")
+    # print(f"Original name: {name}")
 
     if not isinstance(name, str):
         print("Error: Input must be a string.")
@@ -21,7 +21,7 @@ def normalize_names(name: str) -> str:
     # Remove titles in brackets e.g. (Mr), (Mrs), (Dr)
     name = re.sub(r"\([^)]*\)", "", name)
 
-    print(f"After removing title: {name}")
+    # print(f"After removing title: {name}")
 
     # Handle "Surname, First Name" format
     if "," in name:
@@ -32,7 +32,7 @@ def normalize_names(name: str) -> str:
 
         name = f"{first_name} {surname}"
 
-        print(f"Reordered name: {name}")
+        # print(f"Reordered name: {name}")
 
     # Lowercase and remove extra spaces
     normalized_name = " ".join(
@@ -47,7 +47,7 @@ def normalize_names(name: str) -> str:
         .decode("ascii")
     )
 
-    print(f"Normalized name: {normalized_name}")
+    # print(f"Normalized name: {normalized_name}")
 
     return normalized_name
 
@@ -61,7 +61,7 @@ def normalize_names_list(names: list) -> list:
         print("Error: Input must be a list.")
         raise ValueError("Input must be a list.")
 
-    print(f"Normalizing {len(names)} names...")
+    # print(f"Normalizing {len(names)} names...")
 
     normalized_names = [
         normalize_names(name)
