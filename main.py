@@ -7,13 +7,13 @@ from src.writer import write_names_to_excel
 
 def main():
 
-    file_a = "data/input/students_2C_test.xlsx"
-    file_b = "data/input/adult_students_test.xlsx"
+    file_a = "data/input/year2_SMT_PARA_07_10_2026.xlsx"
+    file_b = "data/input/Book13.xlsx"
 
     column_name = "Name"
 
-    names_a = read_names_from_excel(file_a, first_name_column="Name", surname_name_column="Surname")
-    names_b = read_names_from_excel(file_b, full_name_column="Full Name")
+    names_a = read_names_from_excel(file_a, full_name_column="Full Name")
+    names_b = read_names_from_excel(file_b, first_name_column="Name", surname_name_column="Surname")
 
     normalized_names_a = normalize_names_list(names_a)
     normalized_names_b = normalize_names_list(names_b)
